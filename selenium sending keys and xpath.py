@@ -15,7 +15,7 @@ driver.get('https://hyperskill.org/tracks')
 sign_in = driver.find_element(By.XPATH, "//button[normalize-space()='Sign in']")
 sign_in.click()
 
-WebDriverWait(driver, 10).until(
+WebDriverWait(driver, 1).until(
     EC.text_to_be_present_in_element(
         (By.XPATH, "//h2[normalize-space()='Sign in to JetBrains Academy']") ,
         "Sign in to JetBrains Academy"
